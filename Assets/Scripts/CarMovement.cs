@@ -37,6 +37,8 @@ public class CarMovement : MonoBehaviour
         HandleMotor();
         HandleSteering();
         UpdateWheels();
+
+        
     }
 
     private void GetInput()
@@ -47,9 +49,15 @@ public class CarMovement : MonoBehaviour
     }
     private void HandleMotor()
     {
-        _FLwheelCollider.motorTorque = _VerticalInput * _MotorForce * _Speed;
-        _FRwheelCollider.motorTorque = _VerticalInput * _MotorForce * _Speed;
+        _FLwheelCollider.motorTorque = _VerticalInput * _MotorForce;
+        _BLwheelCollider.motorTorque = _VerticalInput * _MotorForce;
+        _FRwheelCollider.motorTorque = _VerticalInput * _MotorForce;
+        _BRwheelCollider.motorTorque = _VerticalInput * _MotorForce;
         _CurrentBreakForce = _IsBreaking ? _BreakForce : 0f;
+        if (!_IsBreaking)
+        {
+            _FRwheelCollider.brakeTorque = _FLwheelCollider.brakeTorque = _BRwheelCollider.brakeTorque = _BLwheelCollider.brakeTorque = 0f;
+        }
         ApplyBreaking();
 
     }
@@ -68,10 +76,10 @@ public class CarMovement : MonoBehaviour
     }
     private void UpdateWheels()
     {
-        UpdateSingleWheel(_FLwheelCollider, _FLwheelTransform);
-        UpdateSingleWheel(_FRwheelCollider, _FRwheelTransform);
-        UpdateSingleWheel(_BLwheelCollider, _BLwheelTransform);
-        UpdateSingleWheel(_BRwheelCollider, _BRwheelTransform);
+        //UpdateSingleWheel(_FLwheelCollider, _FLwheelTransform);
+        //UpdateSingleWheel(_FRwheelCollider, _FRwheelTransform);
+        //UpdateSingleWheel(_BLwheelCollider, _BLwheelTransform);
+        //UpdateSingleWheel(_BRwheelCollider, _BRwheelTransform);
     }
 
     private void UpdateSingleWheel(WheelCollider wheelCollider, Transform wheelTransform)
