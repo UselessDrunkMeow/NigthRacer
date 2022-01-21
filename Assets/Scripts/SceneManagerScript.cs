@@ -12,4 +12,10 @@ public class SceneManagerScript : MonoBehaviour
     {
         SceneManager.LoadScene("Game Scene");
     }
+    public void ChangeScene(string scene)
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene(scene);
+
+    }
 }
