@@ -334,10 +334,10 @@ WheelCollider:
     m_AsymptoteValue: 2
     m_Stiffness: 1
   m_SidewaysFriction:
-    m_ExtremumSlip: 0.4
+    m_ExtremumSlip: 1
     m_ExtremumValue: 1
-    m_AsymptoteSlip: 0.5
-    m_AsymptoteValue: 0.75
+    m_AsymptoteSlip: 1
+    m_AsymptoteValue: 1
     m_Stiffness: 1
   m_Enabled: 1
 --- !u!1 &2354485816776276527
@@ -476,10 +476,10 @@ WheelCollider:
     m_AsymptoteValue: 2
     m_Stiffness: 1
   m_SidewaysFriction:
-    m_ExtremumSlip: 0.4
+    m_ExtremumSlip: 1
     m_ExtremumValue: 1
-    m_AsymptoteSlip: 0.5
-    m_AsymptoteValue: 0.75
+    m_AsymptoteSlip: 1
+    m_AsymptoteValue: 1
     m_Stiffness: 1
   m_Enabled: 1
 --- !u!1 &2354485817022623280
@@ -509,8 +509,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2354485817022623280}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.37, z: 0.2029}
-  m_LocalScale: {x: 1.5, y: 0.20865, z: 3.5}
+  m_LocalPosition: {x: 0, y: -0.0158, z: 0.2029}
+  m_LocalScale: {x: 1.5, y: 0.84808236, z: 3.5}
   m_Children: []
   m_Father: {fileID: 2354485817731243590}
   m_RootOrder: 0
@@ -632,10 +632,10 @@ WheelCollider:
     m_AsymptoteValue: 2
     m_Stiffness: 1
   m_SidewaysFriction:
-    m_ExtremumSlip: 0.4
+    m_ExtremumSlip: 1
     m_ExtremumValue: 1
-    m_AsymptoteSlip: 0.5
-    m_AsymptoteValue: 0.75
+    m_AsymptoteSlip: 1
+    m_AsymptoteValue: 1
     m_Stiffness: 1
   m_Enabled: 1
 --- !u!1 &2354485817218057784
@@ -693,10 +693,10 @@ WheelCollider:
     m_AsymptoteValue: 2
     m_Stiffness: 1
   m_SidewaysFriction:
-    m_ExtremumSlip: 0.4
+    m_ExtremumSlip: 1
     m_ExtremumValue: 1
-    m_AsymptoteSlip: 0.5
-    m_AsymptoteValue: 0.75
+    m_AsymptoteSlip: 1
+    m_AsymptoteValue: 1
     m_Stiffness: 1
   m_Enabled: 1
 --- !u!1 &2354485817731243591
@@ -710,6 +710,8 @@ GameObject:
   - component: {fileID: 2354485817731243590}
   - component: {fileID: 2354485817731243608}
   - component: {fileID: 2354485817731243609}
+  - component: {fileID: 716087284}
+  - component: {fileID: 716087285}
   m_Layer: 0
   m_Name: Car
   m_TagString: Untagged
@@ -765,9 +767,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _Speed: 1
-  _BreakForce: 2000
+  _BreakForce: 100
   _MotorForce: 1000
-  _MaxSteeringAngle: 25
+  _MaxSteeringAngle: 30
   _FLwheelCollider: {fileID: 2354485816903224481}
   _FRwheelCollider: {fileID: 2354485817218057786}
   _BLwheelCollider: {fileID: 2354485817098318347}
@@ -776,6 +778,36 @@ MonoBehaviour:
   _FRwheelTransform: {fileID: 2354485816413099215}
   _BLwheelTransform: {fileID: 2354485816776276526}
   _BRwheelTransform: {fileID: 2354485816674604382}
+--- !u!114 &716087284
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2354485817731243591}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbae9b64353ece446a0b8bcc92f033c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wheelL: {fileID: 2354485817098318347}
+  wheelR: {fileID: 2354485816692001082}
+  antiRollVal: 100000
+--- !u!114 &716087285
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2354485817731243591}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbae9b64353ece446a0b8bcc92f033c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wheelL: {fileID: 2354485816903224481}
+  wheelR: {fileID: 2354485817218057786}
+  antiRollVal: 100000
 --- !u!1 &2354485817895641445
 GameObject:
   m_ObjectHideFlags: 0

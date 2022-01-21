@@ -6,6 +6,8 @@ using UnityEngine;
 public class CarMovement : MonoBehaviour
 {
     //https://www.youtube.com/watch?v=Z4HA8zJhGEk tutorial
+
+    //https://forum.unity.com/threads/how-to-make-a-physically-real-stable-car-with-wheelcolliders.50643/?_ga=2.258903491.890050916.1642672854-1275429231.1604914616 mis hanig
     private const string _HORIZONTAL = "Horizontal";
     private const string _VERTICAL = "Vertical";
 
