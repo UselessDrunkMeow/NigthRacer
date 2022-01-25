@@ -17,11 +17,13 @@ public class CarMovement : MonoBehaviour
     private float _CurrentBreakForce;
     private bool _IsBreaking;
 
-
-    [SerializeField] private float _Speed;
+    public Rigidbody _rb;
+        
     [SerializeField] private float _BreakForce;
     [SerializeField] private float _MotorForce;
     [SerializeField] private float _MaxSteeringAngle;
+
+    [SerializeField] public float _Speed;
 
     [SerializeField] private WheelCollider _FLwheelCollider;
     [SerializeField] private WheelCollider _FRwheelCollider;
@@ -37,9 +39,15 @@ public class CarMovement : MonoBehaviour
     float _CarRotationY;
     float _CarRotationZ;
 
-
+    private void Start()
+    {
+        _rb = GetComponent<Rigidbody>();
+    }
     private void Update()
     {
+        _Speed = _rb.velocity.magnitude * 2;
+        Debug.Log(_Speed.ToString());
+
         if (transform.rotation.z >= 0.01f || transform.rotation.z <= -0.01f)
         {
             transform.rotation = Quaternion.Euler(transform.eulerAngles.x, transform.eulerAngles.y, 0);

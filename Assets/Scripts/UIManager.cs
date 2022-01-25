@@ -1,21 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
-    [Header("Lap Timers")]
-    float _LapTimer;
+    public CarMovement _Car;
+    public float _Speed;
 
-    float _RaceTimeUI;
-    float _Lap1TimeUI;
-    float _Lap2TimeUI;
-    float _Lap3TimeUI;
+    public Slider _SpeedMeter;
 
-    float _Speed;
-            
-    public void NextLapUI()
+    private void Start()
     {
-
+        _Car = FindObjectOfType<CarMovement>();
+    }
+    private void Update()
+    {
+        _Speed = _Car._Speed;
+        _SpeedMeter.value = _Speed;
     }
 }
