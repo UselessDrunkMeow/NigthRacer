@@ -33,14 +33,24 @@ public class CarMovement : MonoBehaviour
     [SerializeField] private Transform _BLwheelTransform;
     [SerializeField] private Transform _BRwheelTransform;
 
+    float _CarRotationX;
+    float _CarRotationY;
+    float _CarRotationZ;
+
+
+    private void Update()
+    {
+        if (transform.rotation.z >= 0.01f || transform.rotation.z <= -0.01f)
+        {
+            transform.rotation = Quaternion.Euler(transform.eulerAngles.x, transform.eulerAngles.y, 0);
+        }
+    }
     private void FixedUpdate()
     {
         GetInput();
-        HandleMotor();
+        HandleMotor();  
         HandleSteering();
         UpdateWheels();
-
-        
     }
 
     private void GetInput()
@@ -89,7 +99,7 @@ public class CarMovement : MonoBehaviour
         Vector3 pos;
         Quaternion rot;
         wheelCollider.GetWorldPose(out pos, out rot);
-        wheelTransform.rotation = rot;        
+        wheelTransform.rotation = rot;
         wheelTransform.position = pos;
         rot.z = 90;
     }

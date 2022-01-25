@@ -98,7 +98,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 1
   m_Interpolate: 0
-  m_Constraints: 80
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!1 &2354485816413099212
 GameObject:
@@ -768,7 +768,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 64
   m_CollisionDetection: 0
 --- !u!114 &2354485817731243609
 MonoBehaviour:
@@ -953,7 +953,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2498021598678101983, guid: 7f5027a99f4b2be4e895efece01e2034, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.43
+      value: -0.85
       objectReference: {fileID: 0}
     - target: {fileID: 2498021598678101983, guid: 7f5027a99f4b2be4e895efece01e2034, type: 3}
       propertyPath: m_LocalPosition.z
