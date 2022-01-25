@@ -51,9 +51,9 @@ public class CarMovement : MonoBehaviour
     }
     private void HandleMotor()
     {
-        _FLwheelCollider.motorTorque = _VerticalInput * _MotorForce;
+        //_FLwheelCollider.motorTorque = _VerticalInput * _MotorForce;
         _BLwheelCollider.motorTorque = _VerticalInput * _MotorForce;
-        _FRwheelCollider.motorTorque = _VerticalInput * _MotorForce;
+        //_FRwheelCollider.motorTorque = _VerticalInput * _MotorForce;
         _BRwheelCollider.motorTorque = _VerticalInput * _MotorForce;
         _CurrentBreakForce = _IsBreaking ? _BreakForce : 0f;
         if (!_IsBreaking)
