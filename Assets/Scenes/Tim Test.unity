@@ -5154,6 +5154,26 @@ PrefabInstance:
       propertyPath: antiRollVal
       value: 200000
       objectReference: {fileID: 0}
+    - target: {fileID: 1908772770865004081, guid: c6bcafa8f9e802a43b888575f063e9d6, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 105
+      objectReference: {fileID: 0}
+    - target: {fileID: 1908772770865004081, guid: c6bcafa8f9e802a43b888575f063e9d6, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 105
+      objectReference: {fileID: 0}
+    - target: {fileID: 1908772770865004081, guid: c6bcafa8f9e802a43b888575f063e9d6, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 105
+      objectReference: {fileID: 0}
+    - target: {fileID: 1908772770865004081, guid: c6bcafa8f9e802a43b888575f063e9d6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.43
+      objectReference: {fileID: 0}
+    - target: {fileID: 2354485816692001082, guid: c6bcafa8f9e802a43b888575f063e9d6, type: 3}
+      propertyPath: m_Mass
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 2354485816692001082, guid: c6bcafa8f9e802a43b888575f063e9d6, type: 3}
       propertyPath: m_Radius
       value: 0.35
@@ -5167,20 +5187,28 @@ PrefabInstance:
       value: 100000
       objectReference: {fileID: 0}
     - target: {fileID: 2354485816692001082, guid: c6bcafa8f9e802a43b888575f063e9d6, type: 3}
+      propertyPath: m_SidewaysFriction.m_Stiffness
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2354485816692001082, guid: c6bcafa8f9e802a43b888575f063e9d6, type: 3}
       propertyPath: m_SidewaysFriction.m_ExtremumSlip
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2354485816692001082, guid: c6bcafa8f9e802a43b888575f063e9d6, type: 3}
       propertyPath: m_SidewaysFriction.m_AsymptoteSlip
-      value: 5
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 2354485816692001082, guid: c6bcafa8f9e802a43b888575f063e9d6, type: 3}
       propertyPath: m_SidewaysFriction.m_ExtremumValue
-      value: 5
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 2354485816692001082, guid: c6bcafa8f9e802a43b888575f063e9d6, type: 3}
       propertyPath: m_SidewaysFriction.m_AsymptoteValue
-      value: 2
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2354485816903224481, guid: c6bcafa8f9e802a43b888575f063e9d6, type: 3}
+      propertyPath: m_Mass
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 2354485816903224481, guid: c6bcafa8f9e802a43b888575f063e9d6, type: 3}
       propertyPath: m_Radius
@@ -5195,26 +5223,34 @@ PrefabInstance:
       value: 100000
       objectReference: {fileID: 0}
     - target: {fileID: 2354485816903224481, guid: c6bcafa8f9e802a43b888575f063e9d6, type: 3}
+      propertyPath: m_SidewaysFriction.m_Stiffness
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2354485816903224481, guid: c6bcafa8f9e802a43b888575f063e9d6, type: 3}
       propertyPath: m_SidewaysFriction.m_ExtremumSlip
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2354485816903224481, guid: c6bcafa8f9e802a43b888575f063e9d6, type: 3}
       propertyPath: m_SidewaysFriction.m_AsymptoteSlip
-      value: 5
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 2354485816903224481, guid: c6bcafa8f9e802a43b888575f063e9d6, type: 3}
       propertyPath: m_SidewaysFriction.m_ExtremumValue
-      value: 5
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 2354485816903224481, guid: c6bcafa8f9e802a43b888575f063e9d6, type: 3}
       propertyPath: m_SidewaysFriction.m_AsymptoteValue
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2354485817022623283, guid: c6bcafa8f9e802a43b888575f063e9d6, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 2354485817098318347, guid: c6bcafa8f9e802a43b888575f063e9d6, type: 3}
+      propertyPath: m_Mass
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 2354485817098318347, guid: c6bcafa8f9e802a43b888575f063e9d6, type: 3}
       propertyPath: m_Radius
       value: 0.35
       objectReference: {fileID: 0}
@@ -5227,20 +5263,28 @@ PrefabInstance:
       value: 100000
       objectReference: {fileID: 0}
     - target: {fileID: 2354485817098318347, guid: c6bcafa8f9e802a43b888575f063e9d6, type: 3}
+      propertyPath: m_SidewaysFriction.m_Stiffness
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2354485817098318347, guid: c6bcafa8f9e802a43b888575f063e9d6, type: 3}
       propertyPath: m_SidewaysFriction.m_ExtremumSlip
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2354485817098318347, guid: c6bcafa8f9e802a43b888575f063e9d6, type: 3}
       propertyPath: m_SidewaysFriction.m_AsymptoteSlip
-      value: 5
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 2354485817098318347, guid: c6bcafa8f9e802a43b888575f063e9d6, type: 3}
       propertyPath: m_SidewaysFriction.m_ExtremumValue
-      value: 5
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 2354485817098318347, guid: c6bcafa8f9e802a43b888575f063e9d6, type: 3}
       propertyPath: m_SidewaysFriction.m_AsymptoteValue
-      value: 2
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2354485817218057786, guid: c6bcafa8f9e802a43b888575f063e9d6, type: 3}
+      propertyPath: m_Mass
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 2354485817218057786, guid: c6bcafa8f9e802a43b888575f063e9d6, type: 3}
       propertyPath: m_Radius
@@ -5255,20 +5299,24 @@ PrefabInstance:
       value: 100000
       objectReference: {fileID: 0}
     - target: {fileID: 2354485817218057786, guid: c6bcafa8f9e802a43b888575f063e9d6, type: 3}
+      propertyPath: m_SidewaysFriction.m_Stiffness
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2354485817218057786, guid: c6bcafa8f9e802a43b888575f063e9d6, type: 3}
       propertyPath: m_SidewaysFriction.m_ExtremumSlip
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2354485817218057786, guid: c6bcafa8f9e802a43b888575f063e9d6, type: 3}
       propertyPath: m_SidewaysFriction.m_AsymptoteSlip
-      value: 5
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 2354485817218057786, guid: c6bcafa8f9e802a43b888575f063e9d6, type: 3}
       propertyPath: m_SidewaysFriction.m_ExtremumValue
-      value: 5
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 2354485817218057786, guid: c6bcafa8f9e802a43b888575f063e9d6, type: 3}
       propertyPath: m_SidewaysFriction.m_AsymptoteValue
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2354485817731243590, guid: c6bcafa8f9e802a43b888575f063e9d6, type: 3}
       propertyPath: m_RootOrder
@@ -5329,6 +5377,10 @@ PrefabInstance:
     - target: {fileID: 2354485817731243609, guid: c6bcafa8f9e802a43b888575f063e9d6, type: 3}
       propertyPath: _MotorForce
       value: 1500
+      objectReference: {fileID: 0}
+    - target: {fileID: 2354485817731243609, guid: c6bcafa8f9e802a43b888575f063e9d6, type: 3}
+      propertyPath: _MaxSteeringAngle
+      value: 25
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 716087285, guid: c6bcafa8f9e802a43b888575f063e9d6, type: 3}
