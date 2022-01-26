@@ -9,10 +9,13 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance { get { return _instance; } }
 
     [Header("Lap Info")]
+    public CarMovement _Car;
+
+
     public int _CurrentLap;    
     public float _RaceTime;
     public float _Lap1Time;
-    public float _Lap2Time;
+    public float _Lap2Time; 
     public float _Lap3Time;
 
     private void Awake()
@@ -26,6 +29,13 @@ public class GameManager : MonoBehaviour
             _instance = this;
         }
     }
+    private void Start()
+    {
+        _Car = FindObjectOfType<CarMovement>();
+        StartCoroutine(StartTimer());
+        _Car._rb.isKinematic = true;
+    }
+
     private void Update()
     {
         LapTimer();
@@ -34,6 +44,15 @@ public class GameManager : MonoBehaviour
     public void NextLap()
     {
         _CurrentLap =+ 1;
+    }
+
+    public IEnumerator StartTimer()
+    {
+        print("aa");
+        yield return new WaitForSeconds(3f);
+        _Car._rb.isKinematic = false;
+        print("aa");
+
     }
 
     public void LapTimer()
