@@ -48,10 +48,10 @@ public class CarMovement : MonoBehaviour
         _Speed = _rb.velocity.magnitude * 2;
         Debug.Log(_Speed.ToString());
 
-        if (transform.rotation.z >= 0.01f || transform.rotation.z <= -0.01f)
-        {
-            transform.rotation = Quaternion.Euler(transform.eulerAngles.x, transform.eulerAngles.y, 0);
-        }
+        //if (transform.rotation.z >= 0.01f || transform.rotation.z <= -0.01f)
+        //{
+        //    transform.rotation = Quaternion.Euler(transform.eulerAngles.x, transform.eulerAngles.y, 0);
+        //}
     }
     private void FixedUpdate()
     {
