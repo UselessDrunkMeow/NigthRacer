@@ -2,13 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class timertext : MonoBehaviour
 {
 
     public Text text;
+    public TextMeshProUGUI FinalTime;
     private float StartTime;
     private bool finished;
+
+    string minutes;
+    string seconds;
 
     // Start is called before the first frame update
     void Start()
@@ -26,11 +31,17 @@ public class timertext : MonoBehaviour
 
             float t = Time.time - StartTime;
 
-            string minutes = ((int)t / 60).ToString();
-            string seconds = (t % 60).ToString("f2");
+             minutes = ((int)t / 60).ToString();
+             seconds = (t % 60).ToString("f2");
             text.text = minutes + ":" + seconds;
         }
-    }
+    }  
 
-   
+    public void StoreFinalTime()
+    {
+        FinalTime.text = minutes + ":" + seconds;
+    }
 }
+
+ 
+
