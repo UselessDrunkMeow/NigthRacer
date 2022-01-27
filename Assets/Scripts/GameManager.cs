@@ -8,14 +8,16 @@ public class GameManager : MonoBehaviour
 
     public static GameManager Instance { get { return _instance; } }
 
-    [Header("Lap Info")]
+    [Header("Car")]
     public CarMovement _Car;
 
+    [SerializeField] bool _CountDown;
 
-    public int _CurrentLap;    
+    [Header("Lap Info")]
+    public int _CurrentLap;
     public float _RaceTime;
     public float _Lap1Time;
-    public float _Lap2Time; 
+    public float _Lap2Time;
     public float _Lap3Time;
 
     private void Awake()
@@ -33,7 +35,10 @@ public class GameManager : MonoBehaviour
     {
         _Car = FindObjectOfType<CarMovement>();
         StartCoroutine(StartTimer());
-        _Car._rb.isKinematic = true;
+        if (_CountDown)
+        {
+            _Car._rb.isKinematic = true;
+        }
     }
 
     private void Update()
@@ -41,27 +46,27 @@ public class GameManager : MonoBehaviour
         LapTimer();
     }
 
-    public void NextLap()
+    public void NextLap()//increases the lap count
     {
-        _CurrentLap =+ 1;
+        _CurrentLap = +1;
     }
 
     public IEnumerator StartTimer()
     {
-        print("aa");
-        yield return new WaitForSeconds(3f);
-        _Car._rb.isKinematic = false;
-        print("aa");
-
+        if (_CountDown)
+        {            
+            yield return new WaitForSeconds(3f);
+            _Car._rb.isKinematic = false;            
+        }
     }
 
-    public void LapTimer()
+    public void LapTimer()//checks what lap it is, and adds the time to the current lab
     {
-        _RaceTime = + Time.deltaTime;
+        _RaceTime = +Time.deltaTime;
         switch (_CurrentLap)
         {
             case 1:
-                _Lap1Time =+ Time.deltaTime;
+                _Lap1Time = +Time.deltaTime;
                 break;
             case 2:
                 _Lap2Time = +Time.deltaTime;

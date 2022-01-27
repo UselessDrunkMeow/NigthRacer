@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class Timertext : MonoBehaviour
 {
-
     public Text text;
     private float StartTime;
     private bool finished;

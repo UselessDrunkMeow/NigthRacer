@@ -9,13 +9,15 @@ public class UIManager : MonoBehaviour
     private static UIManager _instance;
     public static UIManager Instance { get { return _instance; } }
 
+    [Header("Car Info")]
     public CarMovement _Car;
     public float _Speed;
+    public Slider _SpeedMeter;
 
+    [Header("Start Variables")]
     public int _StartTime;
     public TextMeshProUGUI _GoText;
 
-    public Slider _SpeedMeter;
     private void Awake()
     {
         if (_instance != null && _instance != this)
@@ -38,7 +40,7 @@ public class UIManager : MonoBehaviour
         _SpeedMeter.value = _Speed;
     }
 
-    public IEnumerator StartTimer()
+    public IEnumerator StartTimer()//counts to 0 and displays it on the screen
     {
         _StartTime = 3;
         _GoText.text = _StartTime.ToString();

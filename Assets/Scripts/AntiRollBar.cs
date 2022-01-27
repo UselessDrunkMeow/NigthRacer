@@ -3,6 +3,7 @@ using System.Collections;
 
 public class AntiRollBar : MonoBehaviour
 {
+    //https://gamedev.stackexchange.com/questions/118388/how-to-do-an-anti-sway-bar-for-a-car-in-unity-5
     public WheelCollider wheelL;
     public WheelCollider wheelR;
     public float antiRollVal = 5000f;

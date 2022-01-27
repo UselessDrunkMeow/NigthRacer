@@ -4,11 +4,11 @@ using UnityEngine.SceneManagement;
 
 public class SceneManagerScript : MonoBehaviour
 {
-    public void MainMenu()
+    public void MainMenu()//loads the main menu
     {
         SceneManager.LoadScene("Main Menu", LoadSceneMode.Additive);
     }
-    public void StartGame()
+    public void StartGame()//loads the game scene
     {
         SceneManager.LoadScene("Game Scene");
     }

@@ -351,10 +351,10 @@ WheelCollider:
     m_AsymptoteValue: 2
     m_Stiffness: 1
   m_SidewaysFriction:
-    m_ExtremumSlip: 1
-    m_ExtremumValue: 2.5
-    m_AsymptoteSlip: 2.5
-    m_AsymptoteValue: 1
+    m_ExtremumSlip: 2
+    m_ExtremumValue: 5
+    m_AsymptoteSlip: 5
+    m_AsymptoteValue: 2
     m_Stiffness: 1
   m_Enabled: 1
 --- !u!1 &2354485816776276527
@@ -649,10 +649,10 @@ WheelCollider:
     m_AsymptoteValue: 2
     m_Stiffness: 1
   m_SidewaysFriction:
-    m_ExtremumSlip: 1
-    m_ExtremumValue: 2.5
-    m_AsymptoteSlip: 2.5
-    m_AsymptoteValue: 1
+    m_ExtremumSlip: 2
+    m_ExtremumValue: 5
+    m_AsymptoteSlip: 5
+    m_AsymptoteValue: 2
     m_Stiffness: 1
   m_Enabled: 1
 --- !u!1 &2354485817218057784
@@ -782,10 +782,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd3fe002191570d4cbfdf92354436b23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _Speed: 1
+  _rb: {fileID: 0}
   _BreakForce: 850
   _MotorForce: 1500
-  _MaxSteeringAngle: 25
+  _MaxSteeringAngle: 20
+  _Speed: 1
   _FLwheelCollider: {fileID: 2354485816903224481}
   _FRwheelCollider: {fileID: 2354485817218057786}
   _BLwheelCollider: {fileID: 2354485817098318347}
