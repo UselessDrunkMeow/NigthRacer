@@ -15,10 +15,10 @@ public class timertext : MonoBehaviour
     private float StartTime;
     private bool finished;
     
-
+    //text per lap
     public TextMeshProUGUI LapTime1;
     public TextMeshProUGUI LapTime2;
-    public TextMeshProUGUI LapTime3;
+    
 
     public string time;
 
@@ -52,7 +52,8 @@ public class timertext : MonoBehaviour
     public void StoreFinalTime()
     {
         FinalTime.text = minutes + ":" + seconds;
-        
+        oldFinaltime.text =  "Last time" + PlayerPrefs.GetString("time", "No old time jet.");
+
     }
 
     public void StoreLap1()
@@ -63,13 +64,11 @@ public class timertext : MonoBehaviour
     {
         LapTime2.text = minutes + ":" + seconds;
     }
-    public void StoreLap3()
-    {
-        LapTime3.text = minutes + ":" + seconds;
-    }
+    
     public void Mainmenu()
     {
-        oldFinaltime.text =  "Last time" + PlayerPrefs.GetString("time");
+        PlayerPrefs.SetString("time", FinalTime.text);
+       // oldFinaltime.text =  "Last time" + PlayerPrefs.SetString("time", FinalTime.text);
         SceneManager.LoadScene(0);
     }
 
