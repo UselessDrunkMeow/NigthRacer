@@ -12,6 +12,10 @@ public class GameManager : MonoBehaviour
     public CarMovement _Car;
 
     [SerializeField] bool _CountDown;
+    public bool _GameStart;
+
+    public float _Zero = 0;
+
 
     [Header("Lap Info")]
     public int _CurrentLap;
@@ -56,24 +60,28 @@ public class GameManager : MonoBehaviour
         if (_CountDown)
         {            
             yield return new WaitForSeconds(3f);
-            _Car._rb.isKinematic = false;            
+            _Car._rb.isKinematic = false;
+            _GameStart = true;
         }
     }
 
     public void LapTimer()//checks what lap it is, and adds the time to the current lab
     {
-        _RaceTime = +Time.deltaTime;
-        switch (_CurrentLap)
+        if (_GameStart)
         {
-            case 1:
-                _Lap1Time = +Time.deltaTime;
-                break;
-            case 2:
-                _Lap2Time = +Time.deltaTime;
-                break;
-            case 3:
-                _Lap3Time = +Time.deltaTime;
-                break;
+            _RaceTime = +Time.deltaTime;
+            switch (_CurrentLap)
+            {
+                case 1:
+                    _Lap1Time = +Time.deltaTime;
+                    break;
+                case 2:
+                    _Lap2Time = +Time.deltaTime;
+                    break;
+                case 3:
+                    _Lap3Time = +Time.deltaTime;
+                    break;
+            }
         }
     }
 

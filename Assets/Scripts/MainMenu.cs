@@ -33,4 +33,8 @@ public class MainMenu : MonoBehaviour
         _OptionsScreen.SetActive(false);
         _CreditsScreen.SetActive(true);
     }
+    public void Quit()
+    {
+        Application.Quit();
+    }
 }

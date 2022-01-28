@@ -7,18 +7,16 @@ using UnityEngine.SceneManagement;
 
 public class timertext : MonoBehaviour
 {
-
     public Text text;
     public TextMeshProUGUI FinalTime;
     public TextMeshProUGUI oldFinaltime;
 
     private float StartTime;
     private bool finished;
-    
+
     //text per lap
     public TextMeshProUGUI LapTime1;
     public TextMeshProUGUI LapTime2;
-    
 
     public string time;
 
@@ -28,31 +26,35 @@ public class timertext : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        StartTime = Time.time;
+        StartTime =3;
     }
 
     // Update is called once per frame
     void Update()
     {
-        time = FinalTime.text;
-        
-        if (finished)
-            return;
-        else
+        if (GameManager.Instance._GameStart)
         {
+            time = FinalTime.text;
 
-            float t = Time.time - StartTime;
+            if (finished)
+                return;
+            else
+            {
 
-             minutes = ((int)t / 60).ToString();
-             seconds = (t % 60).ToString("f2");
-            text.text = minutes + ":" + seconds;
+                float t = Time.time - StartTime;
+                minutes = ((int)t / 60).ToString();
+                seconds = (t % 60).ToString("f2");
+                text.text = minutes + ":" + seconds;
+
+
+            }
         }
-    }  
+    }
 
     public void StoreFinalTime()
     {
         FinalTime.text = minutes + ":" + seconds;
-        oldFinaltime.text =  "Last time" + PlayerPrefs.GetString("time", "No old time jet.");
+        oldFinaltime.text = "Last time" + PlayerPrefs.GetString("time", "No old time jet.");
 
     }
 
@@ -64,11 +66,11 @@ public class timertext : MonoBehaviour
     {
         LapTime2.text = minutes + ":" + seconds;
     }
-    
+
     public void Mainmenu()
     {
         PlayerPrefs.SetString("time", FinalTime.text);
-       // oldFinaltime.text =  "Last time" + PlayerPrefs.SetString("time", FinalTime.text);
+        // oldFinaltime.text =  "Last time" + PlayerPrefs.SetString("time", FinalTime.text);
         SceneManager.LoadScene(0);
     }
 
