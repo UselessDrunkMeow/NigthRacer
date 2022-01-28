@@ -12,6 +12,10 @@ public class timertext : MonoBehaviour
     private float StartTime;
     private bool finished;
 
+    public TextMeshProUGUI LapTime1;
+    public TextMeshProUGUI LapTime2;
+    public TextMeshProUGUI LapTime3;
+
     string minutes;
     string seconds;
 
@@ -41,7 +45,21 @@ public class timertext : MonoBehaviour
     {
         FinalTime.text = minutes + ":" + seconds;
     }
+
+    public void StoreLap1()
+    {
+        LapTime1.text = minutes + ":" + seconds;
+    }
+    public void StoreLap2()
+    {
+        LapTime2.text = minutes + ":" + seconds;
+    }
+    public void StoreLap3()
+    {
+        LapTime3.text = minutes + ":" + seconds;
+    }
+
 }
 
- 
+
 

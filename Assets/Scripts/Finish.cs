@@ -22,11 +22,27 @@ public class Finish : MonoBehaviour
         {
             raceEnd.SetActive(true);
             timer.StoreFinalTime();
+            
         }
-        
+        if(laps == 2)
+        {
+            timer.StoreLap1();
+        }
+        if (laps == 3)
+        {
+            timer.StoreLap2();
+
+        }
+
     }
     public void Update()
     {
-        Currentlap.text = laps + "/3";
+
+        if (laps < 4)
+        {
+            Currentlap.text = laps + "/3";
+        }
+        else
+            Currentlap.text = "";
     }
 }
