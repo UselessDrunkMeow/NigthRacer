@@ -3,18 +3,24 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class timertext : MonoBehaviour
 {
 
     public Text text;
     public TextMeshProUGUI FinalTime;
+    public TextMeshProUGUI oldFinaltime;
+
     private float StartTime;
     private bool finished;
+    
 
     public TextMeshProUGUI LapTime1;
     public TextMeshProUGUI LapTime2;
     public TextMeshProUGUI LapTime3;
+
+    public string time;
 
     string minutes;
     string seconds;
@@ -28,6 +34,8 @@ public class timertext : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        time = FinalTime.text;
+        
         if (finished)
             return;
         else
@@ -44,6 +52,7 @@ public class timertext : MonoBehaviour
     public void StoreFinalTime()
     {
         FinalTime.text = minutes + ":" + seconds;
+        
     }
 
     public void StoreLap1()
@@ -58,6 +67,12 @@ public class timertext : MonoBehaviour
     {
         LapTime3.text = minutes + ":" + seconds;
     }
+    public void Mainmenu()
+    {
+        oldFinaltime.text =  "Last time" + PlayerPrefs.GetString("time");
+        SceneManager.LoadScene(0);
+    }
+
 
 }
 
